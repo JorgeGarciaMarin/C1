@@ -21,10 +21,10 @@ public class Hub {
         int column = -1;
         if (toStack.priorityLevel==1) {
            column=0;
-           for (int i=9;i>=0;i--){
+           for(int i=9;i>=0;i--){
                if(matrix[i][column]==null){
+                   matrix[i][column]=toStack;
                    row=i;
-                   matrix[row][column]=toStack;
                    System.out.println("Container Stacked:row"+row+" column:"+column);
                    break;
                }
@@ -78,14 +78,14 @@ public class Hub {
             throw new NoContainersException("No containers in this column");
     }
     String displayDataFromID(int ID){
-        for (int i=0;i<10;i++){
-            for (int j=0;j<12;j++){
-                if(matrix[i][j]!=null &&matrix[i][j].ID==ID)
-                    return matrix[i][j].toString();
-            }
-        }
-        System.out.println("Container with ID"+ID+" not found in the hub");
-        return null;
+      for (int i=0;i<10;i++){
+          for (int j=0;j<12;j++){
+              if(matrix[i][j]!=null && matrix[i][j].ID==ID){
+                  return matrix[i][j].toString();
+              }
+          }
+      }
+        return "Container Not Found";
     }
     int containersByCountry(String country){
         int counter=0;
