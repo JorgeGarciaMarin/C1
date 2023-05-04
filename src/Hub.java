@@ -141,7 +141,7 @@ public class Hub {
             }
         }
         else {
-            builder.append("This hub´s ID does not match the entered hub number");
+            builder.append("ID of the hub does not match the entered hub number");
         }
         return builder.toString();
     }
