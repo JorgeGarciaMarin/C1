@@ -87,6 +87,6 @@ public class Container {
                 +"\nSender Company:"+senderCompany+"\nReceiver Company:"+receiverCompany+"\nInspected by Customs:"+inspectedByCustoms;
     }
     public String displayForGivenWeight(){
-        return "Id:"+ID+" Sender Company:"+senderCompany+" Weight"+weight+"\n"+"Checked By Customs:"+inspectedByCustoms;
+        return "Id:"+ID+" Sender Company:"+senderCompany+" Weight"+weight+"Checked By Customs:"+inspectedByCustoms;
     }
 }
