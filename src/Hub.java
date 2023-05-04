@@ -125,4 +125,24 @@ public class Hub {
         } else
             return false;
     }
+    //Method that returns information of the containers with weight less or equal that the one passed by argument as a String(using StringBuilder)
+    StringBuilder weightLessOrEqual(int hubNumber,int weightToCompare){
+        StringBuilder builder=new StringBuilder();
+        if(hubNumber==hubID){
+            for (int i=0;i<10;i++){
+                for (int j=0;j<12;j++){
+                    if(matrix[i][j].weight<=weightToCompare){
+                        //it also sets the "inspectedByCustoms" attribute to true
+                        matrix[i][j].inspectedByCustoms=true;
+                        builder.append(matrix[i][j].displayForGivenWeight());
+                    }
+                    builder.append("\n");
+                }
+            }
+        }
+        else {
+            builder.append("This hub´s ID does not match the entered hub number");
+        }
+        return builder;
+    }
 }

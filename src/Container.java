@@ -86,4 +86,7 @@ public class Container {
         return "ID:"+ID+"\nWeight:"+weight+"\nPriority Level:"+priorityLevel+"\nCountry of Origin:"+countryOrigin+"\nContent Description:"+contentDescription
                 +"\nSender Company:"+senderCompany+"\nReceiver Company:"+receiverCompany+"\nInspected by Customs:"+inspectedByCustoms;
     }
+    public String displayForGivenWeight(){
+        return "Id:"+ID+" Sender Company:"+senderCompany+" Weight"+weight+" Checked By Customs"+inspectedByCustoms;
+    }
 }
